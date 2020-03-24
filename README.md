@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ### Clone Project Locally
 ```ssh
 git clone git@github.com:nomasgrim/pwa-seed.git
@@ -46,7 +45,5 @@ yarn run dev
 ```
 
 ### Hope for the best
-=======
 # pwa-seed
 re-usable scaffolding for new projects
->>>>>>> 7587ac66688aaa2b8e1b10e25a51ed2290866540
