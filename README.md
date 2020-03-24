@@ -1,104 +1,49 @@
-# Pwa-Client
-### Overview
-* Created with create-react-app
-* Consumed by the [pwa-server repo]()
-
-### NPM Packages
-* @material-ui
-* cpx
-* react
-* react-dom
-* react-redux
-* react-router-dom
-* react-scripts
-* react-test-renderer
-* redux
-* redux-form
-* redux-thunk
-* socket.io-client
-
-Dev Dependencies
-* react-styleguidist
-* redux-devtools-extension
-
-### Development
-
-#### Installation: Yarn
-```bash
-yarn install
+### Clone Project Locally
+```ssh
+git clone git@github.com:nomasgrim/pwa-seed.git
+```
+### Fetch and Checkout Develop Brancbh
+```ssh
+git fetch; git checkout develop;
 ```
 
-#### Run locally in browser with hot reloading
-```bash
-yarn start
+### Initial gitsubmodules
+`git submodule init`
+and then update
+`git submodule update --remote`
+
+> Develop branch contains Client and Server Repositories that are independent repos. `pwa-server` && `pwa-client`
+> So running the above commands connects the submodules and updated their respective repos with the develop branch. `.gitmodules` defines and points to the develop branches.
+> It is important each branch including this parent repo follow the same GitFlow approach to stay in sync.
+> To make changes in either of the submodules. Go to the respective directory. Example client.
+
+`cd pwa-client`
+
+> notice the current branch will be `detached` look something similar to `detached:remotes/origin/develop`
+> before creating your own branch off develop, you'll want to make sure green light that detached head is off develop origin and that it is current and matching (remote vs local)
+> Now we create own branch off origin/develop. make changes and are ready to push, create PR for submodule. You'll notice if you are all commited and pushed clean within the submodule, this one being client. That when you go to the parent repo, it will show you are out of sync. That is because from parent repo, the submodule, `pwa-client` at this point, is different from remote/origin vs local/origin. `git submodule update` from the parent repo still should sync you back with submodules to detached develop head.
+> Important: each time submodule has a PR update into develop. Parent repo should very shortly after commit updated heads.
+
+### Move into root directory
+```ssh
+cd pwa-seed
 ```
 
-> Keep in mind that you can run this repo independently from the server repo, but
-any action that uses websockets won't work unless you have the server running.
-
-### Testing
-
-Runs with Jest and displays coverage report
-
-```bash
-yarn test
+### Create .env
+```ssh
+cp pwa-server/.env.example pwa-server/.env
 ```
 
-Jest will look for test files with any of the following popular naming conventions:
-
-* Files with `.js` suffix in `__tests__` folders.
-* Files with `.test.js` suffix.
-* Files with `.spec.js` suffix.
-
-### Debugging in the Editor
-
-**This feature is currently only supported by [Visual Studio Code](https://code.visualstudio.com) and [WebStorm](https://www.jetbrains.com/webstorm/).**
-
-#### Visual Studio Code
-
-Start your app by running `npm start`, and start debugging in VS Code by pressing `F5` or by clicking the green debug icon. You can now write code, set breakpoints, make changes to the code, and debug your newly modified code—all from your editor.
-
-Having problems with VS Code Debugging? Please see their [troubleshooting guide](https://github.com/Microsoft/vscode-chrome-debug/blob/master/README.md#troubleshooting).
-
-#### WebStorm
-
-You would need to have [WebStorm](https://www.jetbrains.com/webstorm/) and [JetBrains IDE Support](https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji) Chrome extension installed.
-
-In the WebStorm menu `Run` select `Edit Configurations...`. Then click `+` and select `JavaScript Debug`. Paste `http://localhost:3000` into the URL field and save the configuration.
-
->Note: the URL may be different if you've made adjustments via the [HOST or PORT environment variables](#advanced-configuration).
-
-Start your app by running `npm start`, then press `^D` on macOS or `F9` on Windows and Linux or click the green debug icon to start debugging in WebStorm.
-
-The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine. 
-
-### Getting Started with Styleguidist
-
-Styleguidist combines a style guide, where all your components are presented on a single page with their props documentation and usage examples, with an environment for developing components in isolation, similar to Storybook. In Styleguidist you write examples in Markdown, where each code snippet is rendered as a live editable playground.
-Then, run the following command inside your app’s directory:
-
-```sh
-yarn run styleguide
+### Install Dependencies
+```ssh
+yarn
 ```
 
-After that, follow the instructions on the screen.
-
-Learn more about React Styleguidist:
-
-* [GitHub Repo](https://github.com/styleguidist/react-styleguidist)
-* [Documentation](https://react-styleguidist.js.org/docs/getting-started.html)
-
-### Building for production
-
-```bash
-yarn run build
+### Run Dev
+```ssh
+yarn run dev
 ```
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-### Remaining Tasks
-
-* Add JSDOC
+### Hope for the best
+# pwa-seed
+re-usable scaffolding for new projects
