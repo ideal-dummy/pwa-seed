@@ -4,31 +4,17 @@ services:
 # Setup node container
 ############
   server: 
-    build: ./pwa-server
+    build: ./server
     expose:
       - ${APP_SERVER_PORT}
-    environment:
-      API_HOST: ${API_HOST}
-      APP_SERVER_PORT: ${APP_SERVER_PORT}
     ports:
       - ${APP_SERVER_PORT}:${APP_SERVER_PORT}
-    volumes:
-      - ./pwa-server/src:/srv/app/services/src
-    command: yarn dev
 ############
 # Setup client container
 ############
   client:
-    build: ./pwa-client
-    environment:
-      - REACT_APP_PORT=${REACT_APP_PORT}
-    expose:
-      - ${REACT_APP_PORT}
+    build: ./client
     ports:
       - ${REACT_APP_PORT}:${REACT_APP_PORT}
-    volumes:
-      - ./pwa-client/src:/srv/app/client/src
-      - ./pwa-client/build:/srv/app/client/build
-    links:
+    depends_on:
       - server
-    command: yarn start

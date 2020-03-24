@@ -1,5 +1,5 @@
 {
-  "name": "pwa-server",
+  "name": "server",
   "version": "1.0.0",
   "description": "Seed app for Express server with websockets that serves create-react-app for client application",
   "main": "./src/server.js",
@@ -13,7 +13,7 @@
     "predev": "npm run lint && echo \"Starting server\"",
     "watch": "nodemon --watch src",
     "dev": "npm-run-all --sequential dotenv watch",
-    "prod": "yarn run build:client-prod && node ./src/server.js",
+    "prod": "npm run build:client-prod && node ./src/server.js",
     "dotenv": "node -r dotenv/config ./src/server.js",
     "start": "node ./src/server.js"
   },
@@ -46,7 +46,7 @@
     ],
     "ignore": [
       "dist/*",
-      "pwa-client/*"
+      "client/*"
     ]
   }
 }

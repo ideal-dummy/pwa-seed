@@ -1,14 +1,15 @@
-FROM node:10.0.0
+FROM node:12.2.0-alpine as build
 
-RUN mkdir -p /srv/app/client
+RUN mkdir -p /tmp/src/client
 
-WORKDIR /srv/app/client
+WORKDIR /tmp/src/client
 
-COPY package.json ./srv/app/client
-COPY yarn.lock ./srv/app/client
+COPY package*.json /tmp/src/client/
 
-RUN yarn
+RUN npm install
 
-COPY . /srv/app/client
+COPY . /tmp/src/client/
 
-CMD ["yarn", "start"]
+EXPOSE 3000
+
+CMD ["npm", "start"]
