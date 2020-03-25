@@ -2,7 +2,7 @@
 ### Overview
 * testing change
 * Created with create-react-app
-* Consumed by the [pwa-server repo]()
+* Used alongside server/
 
 ### NPM Packages
 * @material-ui
@@ -24,14 +24,14 @@ Dev Dependencies
 
 ### Development
 
-#### Installation: Yarn
+#### Installation: NPM
 ```bash
-yarn install
+npm install
 ```
 
 #### Run locally in browser with hot reloading
 ```bash
-yarn start
+npm start
 ```
 
 > Keep in mind that you can run this repo independently from the server repo, but
@@ -42,7 +42,7 @@ any action that uses websockets won't work unless you have the server running.
 Runs with Jest and displays coverage report
 
 ```bash
-yarn test
+npm run test
 ```
 
 Jest will look for test files with any of the following popular naming conventions:
@@ -79,7 +79,7 @@ Styleguidist combines a style guide, where all your components are presented on 
 Then, run the following command inside your app’s directory:
 
 ```sh
-yarn run styleguide
+npm run styleguide
 ```
 
 After that, follow the instructions on the screen.
@@ -92,7 +92,7 @@ Learn more about React Styleguidist:
 ### Building for production
 
 ```bash
-yarn run build
+npm run build
 ```
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.

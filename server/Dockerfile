@@ -4,7 +4,7 @@ RUN mkdir -p /server
 
 WORKDIR /server
 
-COPY package*.json ./server/
+COPY package*.json /server/
 
 RUN npm install
 

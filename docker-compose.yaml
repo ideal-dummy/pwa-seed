@@ -1,17 +1,11 @@
 version: '3'
 services:
-############
-# Setup node container
-############
   server: 
     build: ./server
     expose:
       - ${APP_SERVER_PORT}
     ports:
       - ${APP_SERVER_PORT}:${APP_SERVER_PORT}
-############
-# Setup client container
-############
   client:
     build: ./client
     ports:

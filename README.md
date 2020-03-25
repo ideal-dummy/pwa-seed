@@ -13,20 +13,39 @@ git fetch; git checkout develop;
 cd pwa-seed
 ```
 
-### Create .env
-```ssh
-cp pwa-server/.env.example pwa-server/.env
+### Create Environment Variables
+
+#### Root Environment
+```
+cp .env.example .env
 ```
 
-#### this maybe removed and replaced with docker-compose updates
+#### Server Environment
+```ssh
+cp server/.env.example server/.env
+```
+
 ### Install Dependencies
+
+#### Root
 ```ssh
-npm install
+npm install;
+```
+#### Server
+```ssh
+cd server;
+npm install;
 ```
 
-### Run Dev
+#### Client
 ```ssh
-npm run dev
+cd client;
+npm install;
+```
+
+### Docker Compose
+```ssh
+docker-compose up 
 ```
 
 ### Hope for the best

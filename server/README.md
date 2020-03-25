@@ -1,4 +1,4 @@
-# PWA-Server
+# Server
 
 ### Overview
 * Local Configuration
@@ -22,39 +22,26 @@
 * Standard
 * Snazzy
 
-#### Installation: Yarn
+#### Installation: npm
 ```bash
-yarn install
-```
-#### Clone Client Repo
-Make sure you clone client repo to the same folder the server repo is in and do not rename the repo. 
-The npm copy script is dependent on this.
-```bash
-//TODO: Add repo link
+npm install
 ```
 
-#### Run locally in browser
+### With Docker
+> Go back to the parent directory and run following command
+`docker-compose up`
+
+### Without Docker
+
+#### Run locally in browser without Docker
 ```bash
-yarn run dev
+npm run dev
 ```
 
 #### Documentation
 Using JSDoc
 ```bash
-yarn run jsdoc
-```
-
-#### Updating submodule pwa-client
-If updates are pushed to the child repo you can pull and commit the updates
-```bash
-git pull
-git submodule sync --recursive
-git submodule update --init --recursive
-```
-
-If you need to pull updates from the remote branch
-```bash
-git submodule update --remote
+npm run jsdoc
 ```
 
 #### Dockerization
@@ -63,15 +50,15 @@ Docker Container created, source configurable in Dockerfile.
 
 Build the image(s)
 ```bash
-docker-compose build
+docker image build -t <imagename:tag>
 ```
 
-Start the development server
+Run the image
 ```bash
-docker-compose up
+docker run -p 9000:9000 <imagename:tag>
 ```
 
-[Kitematic](https://kitematic.com/) helps show what docker images are running and allows UI to start/stop them.
+--- ToDo: Validate these older steps ---
 
 #### Deploying docker image to Heroku
 ```bash
