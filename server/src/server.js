@@ -17,7 +17,7 @@ app.get('/', function (req, res) {
   res.send('Server is running on port ' + port)
 })
 
-io.on('connection', socket => {
+io.on('connection', (socket) => {
   initSockets(socket)
 })
 
@@ -36,7 +36,9 @@ app.use((req, res) => {
 app.use((err, req, res) => {
   const status = err.status || 500
   // TODO: Setup logging instead of console.log
-  console.log(`Error ${status} (${err.message}) on ${req.method} ${req.url} with payload ${req.body}.`)
+  console.log(
+    `Error ${status} (${err.message}) on ${req.method} ${req.url} with payload ${req.body}.`
+  )
   res.status(status).send({ status, error: 'Server error' })
 })
 

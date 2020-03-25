@@ -9,7 +9,7 @@ describe('GET /api/getUsers', function () {
     done()
   })
 
-  it('respond with json containing an empty array with 0 users', done => {
+  it('respond with json containing an empty array with 0 users', (done) => {
     supertest(app)
       .get('/api/getUsers')
       .set('Accept', 'application/json')
@@ -18,12 +18,12 @@ describe('GET /api/getUsers', function () {
       .end((err, res) => {
         if (err) throw err
         expect(res.body).to.be.an('object')
-        expect(res.body.users).to.be.an('array').that.is.empty // eslint-disable-line
+        expect(res.body.users).to.be.an("array").that.is.empty; // eslint-disable-line
         done()
       })
   })
 
-  it('respond with json containing an array of 6 users', done => {
+  it('respond with json containing an array of 6 users', (done) => {
     const requestedUsers = 6
     supertest(app)
       .get(`/api/getUsers?requestedUsers=${requestedUsers}`)

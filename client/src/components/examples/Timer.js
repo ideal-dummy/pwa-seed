@@ -1,11 +1,11 @@
-import Button from '@material-ui/core/Button'
-import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
+import Button from "@material-ui/core/Button";
+import React, { Fragment } from "react";
+import PropTypes from "prop-types";
 
 const propTypes = {
   timer: PropTypes.string,
-  startTimer: PropTypes.func.isRequired
-}
+  startTimer: PropTypes.func.isRequired,
+};
 
 /**
  * @function
@@ -17,20 +17,14 @@ const propTypes = {
 const Timer = ({ timer, startTimer }) => {
   return (
     <Fragment>
-      <p>
-                This is the timer value: {timer}
-      </p>
-      <Button
-        variant='contained'
-        color='primary'
-        onClick={startTimer}
-      >
-                Start timer via websockets
+      <p>This is the timer value: {timer}</p>
+      <Button variant="contained" color="primary" onClick={startTimer}>
+        Start timer via websockets
       </Button>
     </Fragment>
-  )
-}
+  );
+};
 
-Timer.propTypes = propTypes
+Timer.propTypes = propTypes;
 
-export default Timer
+export default Timer;

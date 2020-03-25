@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 /**
  * @function
@@ -10,6 +10,6 @@ const GenericNotFound = ({ match }) => (
   <div>
     <h3>404 Page</h3>
   </div>
-)
+);
 
-export default GenericNotFound
+export default GenericNotFound;

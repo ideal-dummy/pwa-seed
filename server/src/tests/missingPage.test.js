@@ -8,10 +8,7 @@ describe('GET /api/error', function () {
     done()
   })
 
-  it('respond with json containing an array of 6 users', done => {
-    supertest(app)
-      .get('/api/invalidEndpoint')
-      .expect(404)
-      .end(done)
+  it('respond with json containing an array of 6 users', (done) => {
+    supertest(app).get('/api/invalidEndpoint').expect(404).end(done)
   })
 })

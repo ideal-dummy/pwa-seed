@@ -1,16 +1,13 @@
-import { connect } from 'react-redux'
-import Fade from '@material-ui/core/Fade'
-import React from 'react'
-import Snackbar from '@material-ui/core/Snackbar'
+import { connect } from "react-redux";
+import Fade from "@material-ui/core/Fade";
+import React from "react";
+import Snackbar from "@material-ui/core/Snackbar";
 
-import { dismissSnackbar } from '../../actions'
+import { dismissSnackbar } from "../../actions";
 
 class FadeSnackbar extends React.Component {
-  render () {
-    const {
-      dismissSnackbar,
-      snackbarNotification
-    } = this.props
+  render() {
+    const { dismissSnackbar, snackbarNotification } = this.props;
 
     return (
       <div>
@@ -20,21 +17,21 @@ class FadeSnackbar extends React.Component {
           onClose={dismissSnackbar}
           TransitionComponent={Fade}
           ContentProps={{
-            'aria-describedby': 'message-id'
+            "aria-describedby": "message-id",
           }}
-          message={<span id='message-id'>{snackbarNotification}</span>}
+          message={<span id="message-id">{snackbarNotification}</span>}
         />
       </div>
-    )
+    );
   }
 }
 
-const mapStateToProps = state => ({
-  snackbarNotification: state.snackbarNotification
-})
+const mapStateToProps = (state) => ({
+  snackbarNotification: state.snackbarNotification,
+});
 
 const mapDispatchToProps = {
-  dismissSnackbar
-}
+  dismissSnackbar,
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(FadeSnackbar)
+export default connect(mapStateToProps, mapDispatchToProps)(FadeSnackbar);
