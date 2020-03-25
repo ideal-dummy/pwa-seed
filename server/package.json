@@ -10,10 +10,10 @@
     "lint": "standard --verbose | snazzy",
     "lint-fix": "standard --fix",
     "jsdoc": "jsdoc app -r --destination ./jsdocs && live-server jsdocs",
-    "predev": "npm run lint && echo \"Starting server\"",
+    "predev": "yarn lint && echo \"Starting server\"",
     "watch": "nodemon --watch src",
     "dev": "npm-run-all --sequential dotenv watch",
-    "prod": "npm run build:client-prod && node ./src/server.js",
+    "prod": "yarn build:client-prod && node ./src/server.js",
     "dotenv": "node -r dotenv/config ./src/server.js",
     "start": "node ./src/server.js"
   },
