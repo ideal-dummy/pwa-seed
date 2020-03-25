@@ -1,14 +1,14 @@
-FROM node:12.2.0-alpine as build
+FROM node:12.2.0-alpine
 
-RUN mkdir -p /tmp/src/server
+RUN mkdir -p /server
 
-WORKDIR /tmp/src/server
+WORKDIR /server
 
-COPY package*.json /tmp/src/server/
+COPY package*.json ./server/
 
 RUN npm install
 
-COPY . /tmp/src/server/
+COPY . /server/
 
 EXPOSE 9000
 

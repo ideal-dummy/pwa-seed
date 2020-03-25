@@ -1,6 +1,6 @@
 {
   "name": "server",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Seed app for Express server with websockets that serves create-react-app for client application",
   "main": "./src/server.js",
   "scripts": {

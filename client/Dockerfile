@@ -1,14 +1,14 @@
-FROM node:12.2.0-alpine as build
+FROM node:12.2.0-alpine
 
-RUN mkdir -p /tmp/src/client
+RUN mkdir -p /client
 
-WORKDIR /tmp/src/client
+WORKDIR /client
 
-COPY package*.json /tmp/src/client/
+COPY package*.json ./client/
 
 RUN npm install
 
-COPY . /tmp/src/client/
+COPY . /client/
 
 EXPOSE 3000
 
