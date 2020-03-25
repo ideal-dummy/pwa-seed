@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactEmapleHeader from '../../components/ReactExampleHeader';
-import '../../styles/index.css';
+import React from "react";
+import ReactEmapleHeader from "../../components/ReactExampleHeader";
+import "../../styles/index.css";
 
 function App() {
   return (
