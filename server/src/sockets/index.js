@@ -1,6 +1,6 @@
-const emitterTypes = require("./emitterTypes");
-const listenerTypes = require("./listenerTypes");
-const { getUsers } = require("../apis");
+const emitterTypes = require('./emitterTypes');
+const listenerTypes = require('./listenerTypes');
+const {getUsers} = require('../apis');
 
 /**
  * @function

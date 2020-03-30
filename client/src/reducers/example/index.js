@@ -1,7 +1,7 @@
-import { combineReducers } from "redux";
+import {combineReducers} from 'redux';
 
-import timer from "./timer";
-import users from "./users";
+import timer from './timer';
+import users from './users';
 
 export default combineReducers({
   timer,

@@ -1,6 +1,6 @@
-import Button from "@material-ui/core/Button";
-import React, { Fragment } from "react";
-import PropTypes from "prop-types";
+import Button from '@material-ui/core/Button';
+import React, {Fragment} from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
   timer: PropTypes.string,
@@ -14,7 +14,7 @@ const propTypes = {
  * @description component for the timer
  * @return {ReactElement} JSX
  */
-const Timer = ({ timer, startTimer }) => {
+const Timer = ({timer, startTimer}) => {
   return (
     <Fragment>
       <p>This is the timer value: {timer}</p>

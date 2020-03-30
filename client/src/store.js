@@ -1,14 +1,14 @@
-import { composeWithDevTools } from "redux-devtools-extension";
-import { createStore, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
+import {composeWithDevTools} from 'redux-devtools-extension';
+import {createStore, applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
 
-import { init as websocketInit, emit } from "./websockets/init";
-import rootReducer from "./reducers/rootReducer";
+import {init as websocketInit, emit} from './websockets/init';
+import rootReducer from './reducers/rootReducer';
 
 const initialState = {};
 
 export default function startUp() {
-  const middleware = [thunk.withExtraArgument({ emit })];
+  const middleware = [thunk.withExtraArgument({emit})];
 
   const store = createStore(
     rootReducer,

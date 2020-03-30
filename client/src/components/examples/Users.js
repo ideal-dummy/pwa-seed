@@ -1,7 +1,7 @@
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import Button from "@material-ui/core/Button";
-import PropTypes from "prop-types";
-import React, { Fragment } from "react";
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import Button from '@material-ui/core/Button';
+import PropTypes from 'prop-types';
+import React, {Fragment} from 'react';
 
 const propTypes = {
   users: PropTypes.array,
@@ -15,7 +15,7 @@ const propTypes = {
  * @description component that displays users
  * @return {ReactElement} JSX
  */
-const Users = ({ users, getUsers }) => {
+const Users = ({users, getUsers}) => {
   return (
     <Fragment>
       <Button variant="contained" color="primary" onClick={getUsers}>

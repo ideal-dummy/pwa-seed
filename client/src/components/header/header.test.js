@@ -1,11 +1,11 @@
 /* eslint-env jest */
-import React from "react";
-import renderer from "react-test-renderer";
-import { MemoryRouter } from "react-router-dom";
+import React from 'react';
+import renderer from 'react-test-renderer';
+import {MemoryRouter} from 'react-router-dom';
 
-import Header from "./Header";
+import Header from './Header';
 
-test("Renders the header component", () => {
+test('Renders the header component', () => {
   const component = renderer.create(
     <MemoryRouter>
       <Header />

@@ -1,3 +1,3 @@
-import ReactExampleHeader from "./ReactExampleHeader";
+import ReactExampleHeader from './ReactExampleHeader';
 
 export default ReactExampleHeader;

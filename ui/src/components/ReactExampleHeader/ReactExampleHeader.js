@@ -1,6 +1,6 @@
-import React from "react";
-import logo from "../../logo.svg";
-import "./ReactExampleHeader.css";
+import React from 'react';
+import logo from '../../logo.svg';
+import './ReactExampleHeader.css';
 
 function ReactExampleHeader() {
   return (

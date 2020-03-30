@@ -1,4 +1,4 @@
-import listenerTypes from "../../websockets/listenerTypes";
+import listenerTypes from '../../websockets/listenerTypes';
 
 /**
  * @function

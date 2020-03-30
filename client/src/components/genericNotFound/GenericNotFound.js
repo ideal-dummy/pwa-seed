@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 /**
  * @function
@@ -6,7 +6,7 @@ import React from "react";
  * @description 404 page
  * @return {ReactElement} JSX
  */
-const GenericNotFound = ({ match }) => (
+const GenericNotFound = ({match}) => (
   <div>
     <h3>404 Page</h3>
   </div>

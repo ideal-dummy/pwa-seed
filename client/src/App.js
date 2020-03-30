@@ -1,11 +1,11 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-import Examples from "./components/examples/ExamplesList";
-import Footer from "./components/footer/Footer";
-import GenericNotFound from "./components/genericNotFound/GenericNotFound";
-import Header from "./components/header/Header";
-import Snackbar from "./components/snackbar/Snackbar";
+import Examples from './components/examples/ExamplesList';
+import Footer from './components/footer/Footer';
+import GenericNotFound from './components/genericNotFound/GenericNotFound';
+import Header from './components/header/Header';
+import Snackbar from './components/snackbar/Snackbar';
 
 /**
  * @function
