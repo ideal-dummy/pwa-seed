@@ -1,5 +1,5 @@
-import actionTypes from '../../actions/actionTypes'
-import listenerTypes from '../../websockets/listenerTypes'
+import actionTypes from '../../actions/actionTypes';
+import listenerTypes from '../../websockets/listenerTypes';
 
 /**
  * @function
@@ -14,9 +14,9 @@ const timer = (state = 'Timer not started', action) => {
     action.type === listenerTypes.SERVER_TIMER ||
     action.type === actionTypes.CLIENT_SUBSCRIBE_TO_TIMER
   ) {
-    return action.payload
+    return action.payload;
   }
-  return state
-}
+  return state;
+};
 
-export default timer
+export default timer;

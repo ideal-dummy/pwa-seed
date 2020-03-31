@@ -1,4 +1,4 @@
-import listenerTypes from '../../websockets/listenerTypes'
+import listenerTypes from '../../websockets/listenerTypes';
 
 /**
  * @function
@@ -10,9 +10,9 @@ import listenerTypes from '../../websockets/listenerTypes'
  */
 const users = (state = [], action) => {
   if (action.type === listenerTypes.SERVER_USERS) {
-    return action.payload
+    return action.payload;
   }
-  return state
-}
+  return state;
+};
 
-export default users
+export default users;

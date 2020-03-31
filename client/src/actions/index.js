@@ -1,6 +1,6 @@
-import dismissSnackbar from './dismissSnackbar'
-import getUsers from './getUsers'
-import startTimer from './startTimer'
+import dismissSnackbar from './dismissSnackbar';
+import getUsers from './getUsers';
+import startTimer from './startTimer';
 
 /**
  * @namespace Actions
@@ -14,8 +14,4 @@ import startTimer from './startTimer'
  * @param {function} getState - A function to get the current state from the app store
  */
 
-export {
-  dismissSnackbar,
-  getUsers,
-  startTimer
-}
+export {dismissSnackbar, getUsers, startTimer};

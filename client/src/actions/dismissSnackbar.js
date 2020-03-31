@@ -1,4 +1,4 @@
-import actionTypes from '../actions/actionTypes'
+import actionTypes from '../actions/actionTypes';
 
 /**
  * @function
@@ -6,8 +6,8 @@ import actionTypes from '../actions/actionTypes'
  */
 const dismissSnackbar = () => (dispatch) => {
   dispatch({
-    type: actionTypes.DISMISS_SNACKBAR
-  })
-}
+    type: actionTypes.DISMISS_SNACKBAR,
+  });
+};
 
-export default dismissSnackbar
+export default dismissSnackbar;

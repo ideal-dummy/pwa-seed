@@ -2,7 +2,7 @@ const listenerTypes = {
   SERVER_ERROR: 'SERVER_ERROR',
   SERVER_TIMER: 'SERVER_TIMER',
   SERVER_USERS_ERROR: 'SERVER_USERS_ERROR',
-  SERVER_USERS: 'SERVER_USERS'
-}
+  SERVER_USERS: 'SERVER_USERS',
+};
 
-export default listenerTypes
+export default listenerTypes;

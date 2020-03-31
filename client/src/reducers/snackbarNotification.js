@@ -1,5 +1,5 @@
-import listenerTypes from '../websockets/listenerTypes'
-import actionTypes from '../actions/actionTypes'
+import listenerTypes from '../websockets/listenerTypes';
+import actionTypes from '../actions/actionTypes';
 
 /**
  * @function
@@ -8,19 +8,15 @@ import actionTypes from '../actions/actionTypes'
 const snackbarNotification = (state = '', action) => {
   switch (action.type) {
     case listenerTypes.SERVER_USERS:
-      return `${action.type} was successful!`
+      return `${action.type} was successful!`;
     case listenerTypes.SERVER_ERROR:
-      const {
-        errorCode,
-        description,
-        requestedActionType
-      } = action.payload
-      return `${requestedActionType} failed. ${errorCode}: ${description}`
+      const {errorCode, description, requestedActionType} = action.payload;
+      return `${requestedActionType} failed. ${errorCode}: ${description}`;
     case actionTypes.DISMISS_SNACKBAR:
-      return ''
+      return '';
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default snackbarNotification
+export default snackbarNotification;

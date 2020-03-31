@@ -1,41 +1,47 @@
 # Pwa-Client
+
 ### Overview
-* testing change
-* Created with create-react-app
-* Used alongside server/
+
+- testing change
+- Created with create-react-app
+- Used alongside server/
 
 ### NPM Packages
-* @material-ui
-* cpx
-* react
-* react-dom
-* react-redux
-* react-router-dom
-* react-scripts
-* react-test-renderer
-* redux
-* redux-form
-* redux-thunk
-* socket.io-client
+
+- @material-ui
+- cpx
+- react
+- react-dom
+- react-redux
+- react-router-dom
+- react-scripts
+- react-test-renderer
+- redux
+- redux-form
+- redux-thunk
+- socket.io-client
 
 Dev Dependencies
-* react-styleguidist
-* redux-devtools-extension
+
+- react-styleguidist
+- redux-devtools-extension
 
 ### Development
 
 #### Installation: NPM
+
 ```bash
 npm install
 ```
 
 #### Run locally in browser with hot reloading
+
 ```bash
 npm start
 ```
 
 > Keep in mind that you can run this repo independently from the server repo, but
-any action that uses websockets won't work unless you have the server running.
+> any action that uses websockets won't work unless you have the server running.
 
 ### Testing
 
@@ -47,9 +53,9 @@ npm run test
 
 Jest will look for test files with any of the following popular naming conventions:
 
-* Files with `.js` suffix in `__tests__` folders.
-* Files with `.test.js` suffix.
-* Files with `.spec.js` suffix.
+- Files with `.js` suffix in `__tests__` folders.
+- Files with `.test.js` suffix.
+- Files with `.spec.js` suffix.
 
 ### Debugging in the Editor
 
@@ -67,11 +73,11 @@ You would need to have [WebStorm](https://www.jetbrains.com/webstorm/) and [JetB
 
 In the WebStorm menu `Run` select `Edit Configurations...`. Then click `+` and select `JavaScript Debug`. Paste `http://localhost:3000` into the URL field and save the configuration.
 
->Note: the URL may be different if you've made adjustments via the [HOST or PORT environment variables](#advanced-configuration).
+> Note: the URL may be different if you've made adjustments via the [HOST or PORT environment variables](#advanced-configuration).
 
 Start your app by running `npm start`, then press `^D` on macOS or `F9` on Windows and Linux or click the green debug icon to start debugging in WebStorm.
 
-The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine. 
+The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine.
 
 ### Getting Started with Styleguidist
 
@@ -86,14 +92,15 @@ After that, follow the instructions on the screen.
 
 Learn more about React Styleguidist:
 
-* [GitHub Repo](https://github.com/styleguidist/react-styleguidist)
-* [Documentation](https://react-styleguidist.js.org/docs/getting-started.html)
+- [GitHub Repo](https://github.com/styleguidist/react-styleguidist)
+- [Documentation](https://react-styleguidist.js.org/docs/getting-started.html)
 
 ### Building for production
 
 ```bash
 npm run build
 ```
+
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
@@ -102,4 +109,4 @@ Your app is ready to be deployed!
 
 ### Remaining Tasks
 
-* Add JSDOC
+- Add JSDOC

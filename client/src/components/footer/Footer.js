@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import './footer.css'
+import './footer.css';
 
 /**
  * @function Footer
@@ -8,10 +8,10 @@ import './footer.css'
  * @return {ReactElement} JSX
  */
 const Footer = () => (
-  <div className='footer'>
+  <div className="footer">
     <hr />
     <h4>This is the footer</h4>
   </div>
-)
+);
 
-export default Footer
+export default Footer;
