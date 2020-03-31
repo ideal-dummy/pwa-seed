@@ -11,7 +11,7 @@
     "prod": "npm-run-all --sequential start:server build:client-prod",
     "dev:server": "cd ./server/ && yarn &&  yarn dev",
     "dev": "npm-run-all --parallel dev:server start:client",
-    "start": "npm-run-all --parallel start:server start:client"
+    "start": "npm-run-all --parallel dev:server start:client"
   },
   "dependencies": {
     "cpx": "^1.5.0"

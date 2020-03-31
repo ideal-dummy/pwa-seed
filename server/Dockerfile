@@ -6,10 +6,10 @@ WORKDIR /server
 
 COPY package*.json /server/
 
-RUN yarn
+RUN npm install
 
 COPY . /server/
 
 EXPOSE 9000
 
-CMD ["yarn", "dev"]
+CMD ["npm", "run", "dev"]

@@ -37,27 +37,16 @@ cp server/.env.example server/.env
 #### Root
 
 ```ssh
-npm install;
+yarn start
 ```
-
-#### Server
-
-```ssh
-cd server;
-npm install;
-```
-
-#### Client
-
-```ssh
-cd client;
-npm install;
-```
+> this should kick off a yarn install in both the server and client folder. then start both directories to run together.
 
 ### Docker Compose
 
+> this can be run after yarn start has been run on the root directory.
+
 ```ssh
-docker-compose up
+docker-compose up --build
 ```
 
 ### Hope for the best
